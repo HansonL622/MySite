@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#87bde5" />
+    <meta name="description" content="Zhenghan 的互动作品小屋。推开门，在日漫风格的 3D 空间里探索作品与故事。" />
+    <title>Zhenghan 的作品小屋 · 互动初稿</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main id="app">
+      <div id="scene" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+      <header class="site-header">
+        <a href="#home" class="brand" id="home-link"><span class="brand-symbol">✦</span> ZHENGHAN<span class="brand-dot">.</span></a>
+        <span class="edition">A SMALL WORLD TO EXPLORE <i></i> 2026</span>
+        <button class="sound-toggle" id="sound-toggle" aria-label="切换声音" aria-pressed="false"><span class="sound-icon">♪</span><span id="sound-label">SOUND OFF</span></button>
+      </header>
+
+      <section class="hero-ui" id="hero-ui" aria-labelledby="hero-title">
+        <h1 id="hero-title">欢迎来到<br><em>我的小屋</em><span class="title-star">✳</span></h1>
+        <div class="hero-footnote"><span class="footnote-star">✦</span> 点击门，开启一段小小的探索</div>
+      </section>
+
+      <section class="inside-ui" id="inside-ui" aria-label="四个主题空间" hidden>
+        <div class="inside-bottom"><button class="back-button" id="exit-button">← 回到屋外</button><span>SCROLL TO WALK <span class="drag-symbol">↕</span> DRAG TO LOOK <span class="drag-symbol">↔</span></span><div class="walk-controls"><button id="walk-back" aria-label="后退一段">后退</button><button id="walk-forward" aria-label="前进一段">继续前进 →</button></div></div>
+      </section>
+
+      <div class="scene-hint" id="scene-hint">CLICK TO EXPLORE <span>✦</span></div>
+      <section class="room-ui" id="room-ui" aria-labelledby="room-title" hidden>
+        <div class="room-heading"><span class="room-kicker" id="room-kicker"></span><h2 id="room-title"></h2><p id="room-intro"></p></div>
+        <div class="room-exhibits" id="room-exhibits"></div>
+        <button class="room-back" id="room-back">← 返回走廊</button>
+      </section>
+      <div class="entry-split" id="entry-split" aria-hidden="true">
+        <div class="entry-half entry-half--left">
+          <div class="entry-spray entry-spray--left"></div>
+          <div class="entry-graffiti entry-graffiti--left">
+            <span style="--ink:#f2c768;--tilt:-8deg">Z</span><span style="--ink:#e88279;--tilt:5deg">H</span><span style="--ink:#81c8cf;--tilt:-5deg">E</span><span style="--ink:#a38ccc;--tilt:7deg">N</span><span style="--ink:#9dc17f;--tilt:-6deg">G</span>
+          </div>
+          <span class="entry-handle" aria-hidden="true"></span>
+        </div>
+        <div class="entry-half entry-half--right">
+          <div class="entry-spray entry-spray--right"></div>
+          <div class="entry-graffiti entry-graffiti--right">
+            <span style="--ink:#f4a467;--tilt:7deg">H</span><span style="--ink:#84b7df;--tilt:-7deg">A</span><span style="--ink:#e99db4;--tilt:5deg">N</span>
+          </div>
+          <span class="entry-handle" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="transition" id="transition" aria-hidden="true"></div>
+      <div class="loading" id="loading">正在准备小屋 <span>✦</span></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
